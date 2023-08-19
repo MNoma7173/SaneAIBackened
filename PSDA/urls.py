@@ -20,6 +20,11 @@ from PSM import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('create_products/', views.CProduct.as_view()),
-    path('create_order/', views.COrder.as_view()),
+    path('create_order/', views.OrderView.as_view()),
+    path('login/', views.LoginView.as_view()),
+    path('Profile/', views.Profile.as_view()),
+    path('create_products/', views.ProductView.as_view()),
+    path('update_products/', views.UpdateProductView.as_view()),
+    path('signup/', views.SignUpView.as_view()),
+    path('isadmin/', views.AdminAppView.as_view()),
 ]

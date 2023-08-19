@@ -30,6 +30,9 @@ ALLOWED_HOSTS = [
     '192.168.0.103',
     '127.0.0.1',
     '13.53.129.11',
+    '192.168.0.102',
+    '192.168.0.113',
+    '0.0.0.0',
 ]
 
 
@@ -43,8 +46,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'rest_framework.authtoken',
     'PSM',
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ]
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
